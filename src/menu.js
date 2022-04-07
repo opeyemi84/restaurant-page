@@ -30,4 +30,18 @@ function createMenuItem(name, description) {
   const foodImage = document.createElement("img");
   foodImage.src = `images/${name.toLowerCase()}.jpg`;
   foodImage.alt = `{name}`;
+
+  menuItem.appendChild(foodImage);
+  menuItem.appendChild(foodName);
+  menuItem.appendChild(foodDescription);
+
+  return menuItem;
 }
+
+function loadMenu() {
+  const main = document.getElementById("main");
+  main.textContent = "";
+  main.appendChild(createMenu());
+}
+
+export default loadMenu;
