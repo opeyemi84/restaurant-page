@@ -3,6 +3,7 @@ import loadMenu from "./menu";
 import loadHome from "./home";
 import loadContact from "./contact";
 
+//----------------------- Header function start ------------------
 function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
@@ -16,6 +17,9 @@ function createHeader() {
 
   return header;
 }
+//----------------------- Header section end ----------------------
+
+//----------------------- Nav section start -----------------------
 
 function createNav() {
   const nav = document.createElement("nav");
@@ -55,6 +59,8 @@ function createNav() {
 
   return nav;
 }
+
+//--------------------- Nav section end --------------------------
 
 // document.body.appendChild(createNav());
 //load page content
