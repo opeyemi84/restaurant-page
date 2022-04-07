@@ -3,6 +3,20 @@ import loadMenu from "./menu";
 import loadHome from "./home";
 import loadContact from "./contact";
 
+function createHeader() {
+  const header = document.createElement("header");
+  header.classList.add("header");
+
+  const restaurantName = document.createElement("h1");
+  restaurantName.classList.add("restaurant-name");
+  restaurantName.textContent = "RoyalHands";
+
+  header.appendChild(restaurantName);
+  header.appendChild(createNav());
+
+  return header;
+}
+
 function createNav() {
   const nav = document.createElement("nav");
   //home button
@@ -42,4 +56,7 @@ function createNav() {
   return nav;
 }
 
-document.body.appendChild(createNav());
+// document.body.appendChild(createNav());
+//load page content
+const loadContent = document.getElementById("content");
+loadContent.appendChild(createHeader());
