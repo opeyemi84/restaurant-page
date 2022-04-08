@@ -8,7 +8,7 @@ function createContact() {
   const address = document.createElement("p");
   address.textContent = "2222, Happiness Crescent, Indianapolis, USA";
 
-  const location = document.createElement(img);
+  const location = document.createElement("img");
   location.src = "";
   location.alt = "location";
 
@@ -19,7 +19,7 @@ function createContact() {
   return contact;
 }
 
-//load contact
+//funtion to load contact
 function loadContact() {
   const main = document.getElementById("main");
   main.textContent = "";
