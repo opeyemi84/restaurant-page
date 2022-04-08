@@ -62,7 +62,36 @@ function createNav() {
 
 //--------------------- Nav section end --------------------------
 
+// -------------------- Function to setActiveButton Start --------------
+
+function setActiveButton(button) {
+  const buttons = document.querySelectorAll(".button-nav");
+  buttons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove("active");
+    }
+  });
+  button.classList.add("active");
+}
+
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  main.setAttribute("id", "main");
+  return main;
+}
+
+// -------------------- Function to setActiveButton End --------------
 // document.body.appendChild(createNav());
 //load page content
-const loadContent = document.getElementById("content");
-loadContent.appendChild(createHeader());
+
+function loadPage() {
+  const loadContent = document.getElementById("content");
+  loadContent.appendChild(createHeader());
+  loadContent.appendChild(createMain());
+
+  setActiveButton(document.querySelector(".button-nav"));
+  loadHome();
+}
+
+loadPage();
