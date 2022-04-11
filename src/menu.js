@@ -10,7 +10,7 @@ function createMenu() {
     createMenuItem("Fufu", "Cassava, Melon soup, Beef, Smoked fish")
   );
   menu.appendChild(
-    createMenuItem("Iyan", "Pounded yam, efo-riro, Crabs, Shrimps")
+    createMenuItem("Iyan-efo-riro", "Pounded yam, efo-riro, Crabs, Shrimps")
   );
   menu.appendChild(createMenuItem("Semo", "Semolina Flour, Vegetables"));
 
@@ -28,8 +28,8 @@ function createMenuItem(name, description) {
   foodDescription.textContent = description;
 
   const foodImage = document.createElement("img");
-  foodImage.src = `images/${name.toLowerCase()}.jpg`;
-  foodImage.alt = `{image}`;
+  foodImage.src = `images/images/food/${name.toLowerCase()}.jpg`;
+  foodImage.alt = `${name}`;
 
   menuItem.appendChild(foodImage);
   menuItem.appendChild(foodName);
