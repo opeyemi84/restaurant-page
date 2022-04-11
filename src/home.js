@@ -6,8 +6,14 @@ function createHome() {
   chefImage.src = "";
   chefImage.alt = "Chef";
 
-  home.appendChild(createParagraph("Best pizza in your country"));
-  home.appendChild(createParagraph("Made with passion since 1908"));
+  home.appendChild(
+    createParagraph("Visit the best african restaurant in your city")
+  );
+  home.appendChild(
+    createParagraph(
+      "Local dishes made with the best recipes from the African Soil for your enjoyment!"
+    )
+  );
   home.appendChild(chefImage);
   home.appendChild(createParagraph("Order online or visit us!"));
 
